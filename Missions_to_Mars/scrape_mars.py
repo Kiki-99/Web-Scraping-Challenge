@@ -179,13 +179,35 @@ def scrape():
         
     print(hemisphere_image_urls)
 
-    mars_dictionary = {
-        "NewsTitle":newsTitle,
-        "NewsText":newsText,
-        "ImageURL":image_url,
-        "FinalTable":finaltable,
-        "HemishpereImageURL":hemisphere_image_urls
-    }
+ """ Mars Data Dictionary - MongoDB """
 
-    return mars_dictionary
+    # Create empty dictionary for all Mars Data.
+    mars_data = {}
+
+    # Append news_title and news_paragraph to mars_data.
+    mars_data['newsTitle'] = newsTitle
+    mars_data['newsText'] = newsText
+
+    # Append featured_image_url to mars_data.
+    mars_data['featured_image_url'] = featured_image_url
+
+    # Append mars_facts to mars_data.
+    mars_data['FinalTable'] = finaltable
+
+    # Append hemisphere_image_urls to mars_data.
+    mars_data['HemishpereImageURL'] = hemisphere_image_urls
+
+    print("Scrape Complete!!!")
+
+    return mars_data
+    
+    #mars_dictionary = {
+        #"NewsTitle":newsTitle,
+        #"NewsText":newsText,
+        #"ImageURL":image_url,
+        #"FinalTable":finaltable,
+        #"HemishpereImageURL":hemisphere_image_urls
+    
+
+    #return mars_dictionary
 
