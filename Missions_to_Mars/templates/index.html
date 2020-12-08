@@ -40,24 +40,16 @@
             <div class="card-body" id="img-table">
               <h5 class="card-title">Featured Mars Image</h5>
               <p class="card-text" id="dark-font">{{ mars.featured_image_url }}</p>
-              <img class="card-img-bottom" src="{{ mars.featured_image }}" alt="Featured Mars Image">
-              <a href={{ mars.jpl_url }} target="_blank">Check All Images</a>
+              <img class="card-img-bottom" src="{{ mars.image_url }}" alt="Featured Mars Image">
+              <a href={{ mars.image_url }} target="_blank">Check All Images</a>
             </div>
           </div>
         </div>
-        <div class="col-md-6" >
-          <div class="card">
-            <div class="card-body" id="img-table">
-              <div class="col-md-12">
-                <h5 class="card-title">Current Weather on Mars</h5>
-                <p class="card-text" id="dark-font">{{ mars.weather }}</p>
-              </div>
-            </div>
             <div class="card-body" id="img-table">
               <div class="col-md-12">
                 <div>
                   <h5 class="card-title">Mars Facts</h5>
-                  <p class="card-text"id="dark-font" >{{ mars.finaltable | safe }}</p>
+                  <p class="card-text"id="dark-font" >{{ mars.FinalTable | safe }}</p>
                 </div>
               </div>
             </div>
@@ -70,7 +62,7 @@
   <div class ="row" id="mars-hemispheres">
     <div class = "col-md-12">
         <h3><center>Mars Hemispheres</center></h3>
-        {% for hemisphere in mars.HemisphereImageUrl %}
+        {% for hemisphere in mars.hemisphere_image_urls %}
             <div class = "col-md-6">
                 <div class = "thumbnail">
                     <img src = "{{hemisphere.img_url}}">

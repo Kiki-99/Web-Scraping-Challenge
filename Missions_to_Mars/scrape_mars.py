@@ -196,14 +196,5 @@ def scrape():
     print("Scrape Complete!!!")
 
     return mars_data
-    
-    #mars_dictionary = {
-        #"NewsTitle":newsTitle,
-        #"NewsText":newsText,
-        #"ImageURL":image_url,
-        #"FinalTable":finaltable,
-        #"HemishpereImageURL":hemisphere_image_urls
-    
-
-    #return mars_dictionary
+   
 
