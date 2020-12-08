@@ -8,14 +8,12 @@ from splinter import Browser
 
 
 
-executable_path = {'executable_path': 'chromedriver.exe'}
-browser = Browser('chrome', **executable_path, headless=False)
-
-
 # ## NASA Mars News
 
 def scrape():
-
+    executable_path = {'executable_path': 'chromedriver.exe'}
+    browser = Browser('chrome', **executable_path, headless=False)
+    
     # URL of page to be scraped
     url = 'https://mars.nasa.gov/news/' 
     browser.visit(url)
@@ -178,8 +176,6 @@ def scrape():
     
         
     print(hemisphere_image_urls)
-
- """ Mars Data Dictionary - MongoDB """
 
     # Create empty dictionary for all Mars Data.
     mars_data = {}
